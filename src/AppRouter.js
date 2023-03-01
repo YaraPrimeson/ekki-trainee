@@ -12,14 +12,16 @@ const AppRouter = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Layout />} >
         <Route path="home" element={<Home />} />
         <Route path="clothes" element={<Clothes />} />
         <Route path="toys" element={<Toys />} />
         <Route path="accessories" element={<Accessories />} />
         <Route path="carryingbags" element={<Carryingbags />} />
         <Route path="dogbed" element={<Dogbed />} />
-        <Route path="delivery" element={<Delivery />}></Route>
+        <Route path="delivery" element={<Delivery />}/>
+
+        </Route>
       </Routes>
     </div>
   );
