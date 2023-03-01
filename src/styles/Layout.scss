@@ -1,0 +1,115 @@
+
+
+.nav__bar__container{
+    display: flex;
+    width: 100%;
+    
+}
+.nav__text__container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+    padding: 20px;
+width: 259px;
+height: 440px;
+background: #D895A1;
+
+}
+.nav__text{
+    text-decoration: none;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+.logo__img{
+    margin-left: 300px;
+    width: 310px;
+    height: 346px;
+    object-fit: contain;
+}
+.basket__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 200px;
+    margin-bottom: 200px;
+
+}
+.lenguage{
+    font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 16px;
+color: #000000;
+
+}
+
+.img__basket{
+width: 20px;
+height: auto;
+object-fit: contain;
+
+}
+
+
+.footer__container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 200px;
+    background: #2D2828;
+
+
+}
+.findus__container{
+    display: flex;
+    flex-direction: row;
+ gap: 50px;
+ margin-left: 150px;
+}
+.find__us1{
+ width: 50px;
+ height: auto;
+ object-fit: contain;
+}
+.find__us2{
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+   }
+   .find__us3{
+    width: 58px;
+    height: auto;
+    object-fit: contain;
+   }
+.footer__logo{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.pay__container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 180px;
+
+}
+.pay{
+    
+
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+
+}
