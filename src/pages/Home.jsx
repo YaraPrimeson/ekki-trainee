@@ -1,4 +1,3 @@
-
 import styles from "../styles/Home.module.scss"
 import guccidog from "../asscets/img/guccidog.png"
 import Ellipse from "../asscets/img/Ellipse.png"
@@ -131,7 +130,7 @@ const Home = () =>{
             </div>
 
         </>
-     
     )
 }
+
 export default Home;

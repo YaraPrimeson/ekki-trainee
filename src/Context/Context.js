@@ -1,11 +1,26 @@
-import { createContext } from "react";
+import React, {createContext} from 'react';
 
-export const Context = createContext({});
-const ProviderContext = ({ children }) => {
-  const pets = {
-    tshirt: "forDogs",
-    shoes: "forCats",
-  };
-  return <Context.Provider value={pets}>{children}</Context.Provider>;
+export const AppContext = createContext({})
+
+const Context = ({children}) => {
+    const themes = {
+        light: {
+            foreground: "#000000",
+            background: "#eeeeee"
+        },
+        dark: {
+            foreground: "#ffffff",
+            background: "#222222"
+        }
+    };
+
+    return (
+        <AppContext.Provider value={{themes}}>
+            <div>
+                {children}
+            </div>
+        </AppContext.Provider>
+    );
 };
-export default ProviderContext;
+
+export default Context;
