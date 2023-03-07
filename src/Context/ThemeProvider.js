@@ -1,22 +1,16 @@
-import React from "react";
-import { createContext } from "react";
+import React, { useState, createContext } from "react";
+export const ThemeContext = createContext(false);
 
-export const ThemeContext = createContext({});
-const ThemeProvider = ({ children }) => {
-  const themes = {
-    light: {
-      foreground: "#000000",
-      background: "#eeeeee",
-    },
-    dark: {
-      foreground: "#ffffff",
-      background: "#222222",
-    },
-  };
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState("#F0D4D9");
+
+  function toggleTheme() {
+    setTheme((prevTheme) => (prevTheme === "#F0D4D9" ? "#441d24" : "#F0D4D9"));
+  }
 
   return (
-    <ThemeContext.Provider value={{ themes }}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
   );
-};
-
-export default ThemeProvider;
+}

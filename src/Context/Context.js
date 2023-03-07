@@ -1,56 +1,60 @@
-import React, {createContext} from 'react';
-import {collection, doc, getDocs, getFirestore, updateDoc} from "firebase/firestore/lite";
-import {firebaseInit} from "../firebase";
+import {
+  addDoc,
+  collection,
+  getDocs,
+  updateDoc,
+  doc,
+  deleteDoc,
+} from "firebase/firestore/lite";
+import React, { createContext } from "react";
+import { getFirestore } from "firebase/firestore/lite";
+import { firebaseInit } from "../Firebase/index.js";
 
-export const AppContext = createContext({})
+export const Context = createContext();
+export const ContextProvider = ({ children }) => {
+  const db = getFirestore(firebaseInit);
+  const clothesCollectionRef = collection(db, "clothes");
 
-const Context = ({children}) => {
-
-    const db = getFirestore(firebaseInit);
-
-    const usersCollectionRef = collection(db, "clothes");
-
-    const getClothes = async () => {
-        const snapshot = await getDocs(usersCollectionRef);
-        const users = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()}));
-        return users;
+  const getClothes = async () => {
+    const snapshot = await getDocs(clothesCollectionRef);
+    const clothes = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    return clothes;
+  };
+  const addClothes = async (name, newPrice, oldPrice) => {
+    try {
+      const docRef = await addDoc(clothesCollectionRef, {
+        name,
+        newPrice,
+        oldPrice,
+      });
+      console.log("Clothes add", docRef.id);
+    } catch (e) {
+      console.log(e, "Error to add");
     }
-
-    const updateUser = async (docId, name, newPrice, oldPrice) => {
-        console.log(docId)
-        console.log(newPrice)
-        const clothesRef = doc(db, "clothes", docId);
-        try {
-            await updateDoc(clothesRef, { name, newPrice, oldPrice });
-            console.log("Update successfully");
-        } catch (e) {
-            console.log(e, "Error updating");
-        }
-    };
-    // async function updateUser(docId, price, oldPrice, title) {
-    //     const userRef = doc(db, "clothes", docId);
-    //     try {
-    //         await updateDoc(userRef, {
-    //             price,
-    //             oldPrice,
-    //             title,
-    //         });
-    //         console.log("Document updated successfully");
-    //     } catch (e) {
-    //         console.error("Error updating document: ", e);
-    //     }
-    // }
-
-    return (
-        <AppContext.Provider value={{
-            getClothes,
-            updateUser
-        }}>
-            <div>
-                {children}
-            </div>
-        </AppContext.Provider>
-    );
+  };
+  const updateClothes = async (docId, name, newPrice, oldPrice) => {
+    const clothesRef = doc(db, "clothes", docId);
+    try {
+      await updateDoc(clothesRef, { name, newPrice, oldPrice });
+      console.log("Update successfully");
+    } catch (e) {
+      console.log(e, "Error updating");
+    }
+  };
+  const deleteClothes = async (docId) => {
+    const clothesRef = doc(db, "clothes", docId);
+    try {
+      await deleteDoc(clothesRef);
+      console.log("Deleted");
+    } catch (e) {
+      console.log(e, "delete failed");
+    }
+  };
+  return (
+    <Context.Provider
+      value={{ getClothes, addClothes, updateClothes, deleteClothes }}
+    >
+      {children}
+    </Context.Provider>
+  );
 };
-
-export default Context;

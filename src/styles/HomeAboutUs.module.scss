@@ -1,0 +1,82 @@
+
+.aboutUs__container{
+    width: 100%;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+}
+.title__aboutUs__conatiner{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.img__up{
+    width: 511px;
+    height: 148px;
+    object-fit: contain;
+}
+.img__down{
+    width: 508px;
+    height: 572px;
+    object-fit: contain;
+}
+.p__title{
+    font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 75px;
+line-height: 105px;
+text-transform: uppercase;
+color: #000000;
+
+}
+.subtitle__aboutUs__container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+}
+.p__title{
+    font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 56px;
+text-transform: uppercase;
+color: #000000;
+
+}
+.li__subtitle{
+    font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 24px;
+text-transform: lowercase;
+color: #000000;
+}
+.p__subtitle{
+    font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 24px;
+text-transform: capitalize;
+color: #000000;
+}
+.postScriptum{
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-right: 30px;
+}
