@@ -8,7 +8,7 @@ import {
 } from "firebase/firestore/lite";
 import React, { createContext } from "react";
 import { getFirestore } from "firebase/firestore/lite";
-import { firebaseInit } from "../Firebase/index.js";
+import { firebaseInit } from "../firebase/index.js";
 
 export const Context = createContext();
 export const ContextProvider = ({ children }) => {
