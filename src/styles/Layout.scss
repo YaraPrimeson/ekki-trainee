@@ -1,9 +1,17 @@
-
-
+.main{
+    display: flex;
+    flex-direction: column;
+   min-height: 100%;
+       background-color: #F0D4D9;
+   
+}
 .nav__bar__container{
     display: flex;
     width: 100%;
-    background-color: #F0D4D9;
+
+
+  
+  
 }
 .nav__text__container{
     display: flex;
@@ -12,13 +20,13 @@
     gap: 35px;
     padding: 20px;
 width: 259px;
-height: 440px;
+height: 100%;
 background: #D895A1;
 
 }
 .nav__text{
     text-decoration: none;
-    font-family: 'Josefin Sans';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -33,6 +41,7 @@ color: #FFFFFF;
     width: 310px;
     height: 346px;
     object-fit: contain;
+    z-index: 1;
 }
 .basket__container{
     display: flex;
@@ -59,7 +68,9 @@ height: auto;
 object-fit: contain;
 
 }
-
+.wrapper{
+    flex: 1 1 auto;
+}
 
 .footer__container{
     width: 100%;
@@ -68,8 +79,8 @@ object-fit: contain;
     flex-direction: row;
     justify-content: center;
     background: #2D2828;
-
-
+   
+ 
 }
 .findus__container{
     display: flex;

@@ -1,16 +1,26 @@
-import {useEffect, useState} from "react";
+import {Context} from '../Context/Context'
+import React, { useContext,useEffect,useState} from 'react'
+import Cards from '../Components/Cards';
+import styles from '../styles/Clothes.module.scss'
 
-
-const Clothes = () => {
-    const [state, setState] = useState([]);
-    useEffect(() => {
-        getClothes()
-    }, [])
-    return (
+const Clothes = () =>{
+    const {getClothes} = useContext(Context);
+    const [data,setData] = useState([]);
+    useEffect(()=>{
+    getClothes().then((res)=> setData(res)).catch(e => console.log(e))
+    }, []);
+    return(
         <div>
-            {state.map((item) => (
-                <Card item={item}/>
-            ))}
+            <div className={styles.header}>Clothes</div>
+            <div className={styles.header__title}>Showing 4 products</div>
+            <div className={styles.container}>
+                {data.map((item) =>
+                <div  key={item.id}>
+                   <Cards item={item}/>
+                </div>
+                )}
+            
+            </div>
         </div>
     )
 }

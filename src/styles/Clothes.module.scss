@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin-bottom: 80px;
+}
+
+.header{
+    position: absolute;
+width: 192px;
+height: 67px;
+left: 313px;
+top: 149px;
+
+font-family: 'Lovelace';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 67px;
+
+color: #000000;
+}
+
+.header__title{
+ font-family: 'Lovelace', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 24px;
+padding: 20px 0px 0px 40px;
+color: #615B5B;
+
+position: absolute;
+width: 1900px;
+height: 69px;
+left: 260px;
+top: 300px;
+
+background: #FAFCF8;
+}
