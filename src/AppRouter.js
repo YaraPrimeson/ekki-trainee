@@ -10,10 +10,9 @@ import Delivery from "./pages/Delivery";
 
 const AppRouter = () => {
   return (
-    <div>
       <Routes>
         <Route path="/" element={<Layout />} >
-        <Route path="home" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="clothes" element={<Clothes />} />
         <Route path="toys" element={<Toys />} />
         <Route path="accessories" element={<Accessories />} />
@@ -22,7 +21,6 @@ const AppRouter = () => {
         <Route path="delivery" element={<Delivery />}/>
         </Route>
       </Routes>
-    </div>
   );
 };
 export default AppRouter;

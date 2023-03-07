@@ -1,7 +1,7 @@
 
 
-const Toys = () =>{
-    return(
+const Toys = () => {
+    return (
         <div>
             <div>Toys</div>
 

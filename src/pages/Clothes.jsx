@@ -1,10 +1,16 @@
+import {useEffect, useState} from "react";
 
 
-const Clothes = () =>{
-    return(
+const Clothes = () => {
+    const [state, setState] = useState([]);
+    useEffect(() => {
+        getClothes()
+    }, [])
+    return (
         <div>
-            <div>Clothes</div>
-          
+            {state.map((item) => (
+                <Card item={item}/>
+            ))}
         </div>
     )
 }

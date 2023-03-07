@@ -1,4 +1,4 @@
-
+import Layout from "../Components/Layout";
 
 const Carryingbags = () =>{
     return(
