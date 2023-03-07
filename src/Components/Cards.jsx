@@ -1,6 +1,5 @@
 import React  from 'react'
 import styles from '../styles/Cards.module.scss'
-import sale from "../asscets/img/sale.png"
 import { Link } from 'react-router-dom'
 
 

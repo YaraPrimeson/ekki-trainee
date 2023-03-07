@@ -1,5 +1,4 @@
 
-
 import React, { useContext, useEffect, useState } from 'react';
 import { Context } from '../Context/Context';
 import styles from '../styles/Carousel.module.scss'
@@ -28,10 +27,11 @@ const Carousel = () => {
   };
 
   return (
+    
     <div className={styles.container}>
       <div className={styles.slider}>
         {data.map((item, index) => (
-          <div
+          <div 
             className={index === selectedSlideIndex ? styles.slideActive : styles.slide}
             key={item.id}
           >

@@ -1,6 +1,5 @@
 import {Context} from '../Context/Context'
 import React, { useContext,useEffect,useState} from 'react'
-import {Link} from 'react-router-dom'
 import Cards from '../Components/Cards';
 import styles from '../styles/Clothes.module.scss'
 
