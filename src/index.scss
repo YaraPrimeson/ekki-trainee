@@ -1,7 +1,16 @@
 @import url(./styles/Layout.scss);
 @import url(./styles/reset.scss);
-@import url(./styles/Home.module.scss);
+@import url(./styles/HomeEkkiBoutique.module.scss);
+@import url(./styles/HomePlashka.module.scss);
+@import url(./styles/Cards.module.scss);
+@import url(./styles/HomeAboutUs.module.scss);
+@import './asscets/fonts/Lovelace/stylesheet.css';
+@import url(./styles/Details.module.scss);
+@import url(./styles/Clothes.module.scss);
+@import url(./styles/Carousel.module.scss);
 
-.body{
-    font-family: 'Roboto', sans-serif;
+
+body{
+    max-height: 100%;
+    font-family: 'Lovelace', sans-serif;
 }

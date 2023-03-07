@@ -1,0 +1,41 @@
+.plashka__container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 10px;
+    height: auto;
+    background-color: white;
+}
+.plashka__elements{
+    width: 25%;
+    display: flex;
+    align-items:  center;
+    gap: 10px;
+    margin-left: 100px;
+}
+.img__elements{
+width: 54px;
+height: 54px;
+object-fit: contain;
+}
+.h3{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.h4{
+    width: 70%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 15px;
+    color: #8A8A8A;
+    
+}
