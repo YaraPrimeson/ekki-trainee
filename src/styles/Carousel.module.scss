@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   height: 400px;
-  margin-top: 50px;
+  margin-top: -250px;
 
 }
 .card__elements{
@@ -54,11 +54,49 @@ color: #615B5B;
   color: #D895A1;
   margin-left: 40px;
 }
-.cards__buttons{
+.cards__buttons__container{
   display: flex;
   flex-direction: row;
   gap: 10px;
+  font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: lowercase;
+    color: #615B5B;
 }
+.cards__button{
+  width: 38.62px;
+  height: 28.97px;
+  background: #FFFFFF;
+  border: 0.5px solid #615B5B;
+  border-radius: 5px;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #615B5B;
+  }
+  .basket__pink{
+      position: absolute;
+      left: 150px;
+      top: 300px;
+      width: 60px;
+      height: 60px;
+      background: #F5F5F5;
+  border: 0.5px solid #D895A1;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  }
+  .basket__img{
+      width: 30px;
+      height: 30px;
+  }
+
+
 .slider {
   display: flex;
   justify-content: center;
@@ -73,6 +111,7 @@ color: #615B5B;
     border-radius: 5%;
   background-color: white;
  
+ 
         
 }
 .slideActive {
@@ -83,6 +122,7 @@ color: #615B5B;
   border-radius: 5%;
   opacity: 1;
   height: 320px;
+
 }
 
 .sliderButtons {
@@ -120,4 +160,48 @@ color: #615B5B;
 
 .nextButton {
   right: 0;
+}
+.sale{
+  width: 300px;
+  height: 300px;
+  margin-left: -10px;
+
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 15000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 15000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 15000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+  
 }

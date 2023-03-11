@@ -2,14 +2,13 @@
 .card__container{
     display: flex;
     flex-direction: row;
-    gap: 130px;
-    margin-top: 40px;
-    padding-top: 80px;
+    padding-top: 30px;
+    position: relative;
 }
 .img__sale{
     position: absolute;
-    margin-top: 40px;
-    margin-left: 60px;
+    top: 40px;
+    left: 60px;
     width: 400px;
 height: 290px;
 object-fit: contain;
@@ -25,6 +24,7 @@ object-fit: contain;
 
 }
 .img__card{
+    display: block;
     width:250px;
 height: 250px;
 object-fit: cover;
@@ -61,8 +61,53 @@ color: #615B5B;
     color: #D895A1;
     margin-left: 40px;
 }
-.cards__buttons{
+.cards__buttons__container{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: lowercase;
+    color: #615B5B;
+    
+}
+
+.cards__button{
+width: 38.62px;
+height: 28.97px;
+background: #FFFFFF;
+border: 0.5px solid #615B5B;
+border-radius: 5px;
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 24px;
+color: #615B5B;
+}
+
+.basket__pink{
+    position: absolute;
+    left: 170px;
+    top: 380px;
+    width: 80px;
+    height: 80px;
+    background: #F5F5F5;
+border: 0.5px solid #D895A1;
+border-radius: 50%;
+margin-left: 20px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+.basket__pink:hover{
+    transform: scale(1.2);
+    background-color: #615B5B;
+    transition: all .4s ease-in-out;
+}
+.basket__img{
+    width: 40px;
+    height: 40px;
 }

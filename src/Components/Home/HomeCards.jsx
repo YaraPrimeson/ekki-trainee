@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+
 import { Context } from '../Context/Context';
 import Cards from '../Components/Cards';
 import Carousel from '../Components/Carousel';
