@@ -1,0 +1,51 @@
+.tab{
+    display: flex;
+    justify-content: space-between;
+}
+.admin__service{
+    background-color: #F0D4D9;
+    height: 160vh;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 70px;
+    margin-top: 250px;
+    }
+
+.header{
+    position: absolute;
+    width: 192px;
+    height: 67px;
+    left: 40px;
+    top: 80px;
+    
+    font-family: 'Lovelace';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 67px;
+    
+    color: #000000;
+
+}
+.header__title{
+    font-family: 'Lovelace', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 20px 0px 0px 40px;
+    color: #615B5B;
+    
+    position: absolute;
+    width: 1900px;
+    height: 69px;
+    left: 0;
+    top: 200px;
+    
+    background: #FAFCF8;
+}
