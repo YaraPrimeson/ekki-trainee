@@ -1,0 +1,28 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #D895A1;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button{
+    // margin-left: 80px;
+    font-family: 'Lovelace';
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    border-radius: 20%;
+}
+.button__text{
+    font-family: 'Lovelace';
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(244, 171, 171);
+}

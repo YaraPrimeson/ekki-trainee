@@ -9,6 +9,8 @@ import Clothes from "./pages/Clothes";
 import Delivery from "./pages/Delivery";
 import NotFound from "./pages/NotFound";
 import Details from "./pages/Details";
+import Admin from "./pages/Admin";
+import AdminService from "./pages/AdminService";
 
 const AppRouter = () => {
   return (
@@ -24,6 +26,7 @@ const AppRouter = () => {
         <Route path="details" element={<Details />} />
         <Route path="*" element={<NotFound />} />
       </Route>
+      <Route path="admin" element={<Admin />} />
     </Routes>
   );
 };

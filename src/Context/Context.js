@@ -6,12 +6,16 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore/lite";
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import { getFirestore } from "firebase/firestore/lite";
-import { firebaseInit } from "../Firebase/index.js";
+import { firebaseInit } from "../firebase/index.js";
 
 export const Context = createContext();
 export const ContextProvider = ({ children }) => {
+  const [isAdmin, setIsAdmin] = useState(false);
+  const toggleIsAdmin = (bool) => {
+    setIsAdmin(bool);
+  };
   const db = getFirestore(firebaseInit);
   const clothesCollectionRef = collection(db, "clothes");
 
@@ -19,6 +23,11 @@ export const ContextProvider = ({ children }) => {
     const snapshot = await getDocs(clothesCollectionRef);
     const clothes = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     return clothes;
+  };
+  const getToys = async () => {
+    const snapshot = await getDocs(collection(db, "toys"));
+    const toys = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    return toys;
   };
   const addClothes = async (name, newPrice, oldPrice) => {
     try {
@@ -52,7 +61,15 @@ export const ContextProvider = ({ children }) => {
   };
   return (
     <Context.Provider
-      value={{ getClothes, addClothes, updateClothes, deleteClothes }}
+      value={{
+        getClothes,
+        addClothes,
+        updateClothes,
+        deleteClothes,
+        getToys,
+        toggleIsAdmin,
+        isAdmin,
+      }}
     >
       {children}
     </Context.Provider>

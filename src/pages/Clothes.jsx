@@ -12,12 +12,11 @@ const Clothes = () =>{
     return(
         <div>
             <div className={styles.header}>Clothes</div>
-            <div className={styles.header__title}>Showing 4 products</div>
+            <div className={styles.header__title}>Showing {data.length} products</div>
             <div className={styles.container}>
                 {data.map((item) =>
-                <div  key={item.id}>
-                   <Cards item={item}/>
-                </div>
+                   <Cards item={item}
+                   key={item.id}/>
                 )}
             
             </div>
