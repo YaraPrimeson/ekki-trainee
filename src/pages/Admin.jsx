@@ -1,10 +1,10 @@
-import React,{useContext, useEffect, useState} from 'react'
+import React,{useContext, useEffect} from 'react'
 import AdminLogin from '../Components/adminLogin';
 import { Context } from '../Context/Context';
 import BasicTabs from '../containers/adminContainer';
 
 const Admin = () => {
-  
+
 const{toggleIsAdmin,isAdmin} = useContext(Context);
 
  useEffect(()=>{
