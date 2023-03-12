@@ -10,7 +10,6 @@ import Delivery from "./pages/Delivery";
 import NotFound from "./pages/NotFound";
 import Details from "./pages/Details";
 import Admin from "./pages/Admin";
-import AdminService from "./pages/AdminService";
 
 const AppRouter = () => {
   return (

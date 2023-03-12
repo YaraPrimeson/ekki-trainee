@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import basketpink from '../asscets/img/basketpink.png';
 
 const Cards = ({ item }) => {
-  const { xl,s, l, m } = item.sizes || {}; 
+  const { xl,s, l, m } = item.sizes || {};
   return (
     <div className={styles.card__container}>
       <div className={styles.card__elements}>
